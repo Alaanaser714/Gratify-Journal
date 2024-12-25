@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:note_app/constant/colors_app.dart';
 
 import '../components/custom_model_bottom_sheet.dart';
 
@@ -10,10 +11,11 @@ class WritesNotesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: ColorsApp.buttonColor,
         onPressed: () {
           showModalBottomSheet(
+            backgroundColor: Colors.grey,
             isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(8),
@@ -24,13 +26,38 @@ class WritesNotesScreen extends StatelessWidget {
             },
           );
         },
-        child: Icon(
+        label: Text(
+          'Add Notes',
+          style: TextStyle(
+            fontSize: 20,
+            color: ColorsApp.textColor,
+          ),
+        ),
+        icon: Icon(
           Icons.add,
-          size: 35,
+          color: ColorsApp.textColor,
+          size: 25,
         ),
       ),
       appBar: AppBar(
-        title: const Text('Gratitude Journal'),
+        centerTitle: true,
+        title: const Text(
+          'Grateful Daily Posts',
+          style: TextStyle(
+            fontSize: 30,
+            color: ColorsApp.textColor,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Text(
+          textAlign: TextAlign.center,
+          "Start your day by writing down what you are grateful for.",
+          style: TextStyle(
+            fontSize: 30,
+            color: ColorsApp.textColor,
+          ),
+        ),
       ),
     );
   }

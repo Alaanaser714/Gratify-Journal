@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, deprecated_member_use
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,11 +16,12 @@ class ColorsListview extends StatefulWidget {
 
 class _ColorsListviewState extends State<ColorsListview> {
   List<Color> colorsList = [
-    Color(0xFFFF0000),
-    Color(0xFF00FF00),
-    Color.fromARGB(255, 82, 82, 106),
-    Color(0xFFFFFF88),
-    Color.fromARGB(255, 230, 230, 23),
+    Color(0xffADD8E6),
+    Color(0xff98FB98),
+    Color(0xffFF69B4),
+    Color(0xffF1C40F),
+    Color(0xffF5F5DC),
+    Color(0xffD2B48C),
   ];
   int currentIndex = 0;
   @override

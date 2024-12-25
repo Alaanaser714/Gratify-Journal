@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/constant/colors_app.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -20,7 +21,7 @@ class CustomButton extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
-          color: Colors.cyan,
+          color: ColorsApp.buttonColor,
         ),
         child: isLoading
             ? const Center(
@@ -33,7 +34,7 @@ class CustomButton extends StatelessWidget {
                 title,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  color: Colors.black,
+                  color: ColorsApp.textColor,
                   fontSize: 25,
                   fontWeight: FontWeight.w500,
                 ),

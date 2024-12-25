@@ -27,20 +27,23 @@ class _CustomListviewNotesState extends State<CustomListviewNotes> {
       builder: (context, state) {
         List<NotesModel>? notes =
             BlocProvider.of<NotesCubit>(context).notes ?? [];
-        return Column(
-          children: [
-            Expanded(
-              child: ListView.builder(
-                itemCount: notes.length,
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                itemBuilder: (context, index) {
-                  return CustomNotesContainer(
-                    notesModel: notes[index],
-                  );
-                },
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: notes.length,
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  itemBuilder: (context, index) {
+                    return CustomNotesContainer(
+                      notesModel: notes[index],
+                    );
+                  },
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         );
       },
     );

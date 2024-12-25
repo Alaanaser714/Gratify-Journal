@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:note_app/constant/colors_app.dart';
 import 'package:note_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:note_app/models/notes_model.dart';
 import 'package:note_app/views/screens/edit_notes_screen.dart';
@@ -41,14 +42,16 @@ class CustomNotesContainer extends StatelessWidget {
               title: Text(
                 notesModel.title,
                 style: const TextStyle(
-                  fontSize: 30,
+                  fontSize: 25,
+                  color: ColorsApp.textColor,
                   fontWeight: FontWeight.w500,
                 ),
               ),
               subtitle: Text(
                 notesModel.subtitle,
                 style: const TextStyle(
-                  fontSize: 20,
+                  color: ColorsApp.textColor,
+                  fontSize: 18,
                   fontWeight: FontWeight.w400,
                 ),
               ),

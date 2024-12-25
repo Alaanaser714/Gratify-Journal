@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/constant/colors_app.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -34,17 +35,20 @@ class CustomTextField extends StatelessWidget {
           fontWeight: FontWeight.w500,
         ),
         border: OutlineInputBorder(
+          borderSide: const BorderSide(
+            color: Colors.black,
+          ),
           borderRadius: BorderRadius.circular(8),
         ),
         enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(
-              color: Colors.white,
+              color: Colors.black,
             )),
         focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8),
             borderSide: const BorderSide(
-              color: Colors.green,
+              color: ColorsApp.buttonColor,
             )),
       ),
     );

@@ -9,7 +9,7 @@ import 'package:note_app/models/notes_model.dart';
 class AddNotesCubits extends Cubit<AddNotesStates> {
   AddNotesCubits() : super(AddNotesInitial());
 
-  Color color = const Color.fromARGB(255, 82, 82, 106);
+  Color color = const Color(0xffADD8E6);
 
   addNotes(NotesModel notesModel) async {
     emit(AddNotesLoading());
