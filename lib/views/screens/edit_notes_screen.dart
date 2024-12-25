@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:note_app/cubits/notes_cubit/notes_cubit.dart';
 import 'package:note_app/models/notes_model.dart';
 
+import '../../constant/colors_app.dart';
 import '../../widgets/custom_text_field.dart';
 
 class EditNotesScreen extends StatefulWidget {
@@ -25,7 +26,10 @@ class _EditNotesScreenState extends State<EditNotesScreen> {
       appBar: AppBar(
         title: const Text(
           "Edit Notes",
-          style: TextStyle(fontSize: 30),
+          style: TextStyle(
+            fontSize: 30,
+            color: ColorsApp.textColor,
+          ),
         ),
         actions: [
           Container(
@@ -49,28 +53,31 @@ class _EditNotesScreenState extends State<EditNotesScreen> {
           )
         ],
       ),
-      body: Column(
-        children: [
-          const SizedBox(
-            height: 40,
-          ),
-          CustomTextField(
-            onChanged: (value) {
-              title = value;
-            },
-            hintText: widget.notesModel.title,
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          CustomTextField(
-            onChanged: (value) {
-              subtitle = value;
-            },
-            hintText: widget.notesModel.subtitle,
-            maxLines: 6,
-          ),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 40,
+            ),
+            CustomTextField(
+              onChanged: (value) {
+                title = value;
+              },
+              hintText: widget.notesModel.title,
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            CustomTextField(
+              onChanged: (value) {
+                subtitle = value;
+              },
+              hintText: widget.notesModel.subtitle,
+              maxLines: 6,
+            ),
+          ],
+        ),
       ),
     );
   }
