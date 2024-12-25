@@ -30,13 +30,16 @@ class CustomButton extends StatelessWidget {
                 height: 25,
                 child: CircularProgressIndicator(),
               ))
-            : Text(
-                title,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  color: ColorsApp.textColor,
-                  fontSize: 25,
-                  fontWeight: FontWeight.w500,
+            : Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: Text(
+                  title,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    color: ColorsApp.textColor,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ),
       ),
