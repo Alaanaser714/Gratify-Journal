@@ -25,8 +25,7 @@ class MyApp extends StatelessWidget {
       create: (context) => NotesCubit(),
       child: MaterialApp(
         theme: ThemeData(
-          brightness: Brightness.dark,
-          fontFamily: "Change",
+          fontFamily: "Open Sans",
         ),
         debugShowCheckedModeBanner: false,
         home: const NotesScreen(),

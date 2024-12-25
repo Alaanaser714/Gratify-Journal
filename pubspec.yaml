@@ -83,10 +83,14 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Change
+    - family: Open Sans
       fonts:
-        - asset: assets/fonts/Changa/static/Changa-Regular.ttf
-        - asset: assets/fonts/Changa/static/Changa-Bold.ttf
+        - asset: assets/fonts/static/OpenSans_Condensed-Italic.ttf
+        - asset: assets/fonts/static/OpenSans_Condensed-Regular.ttf
+        - asset: assets/fonts/static/OpenSans_Condensed-Bold.ttf
+        
+
+        
           
     
   #

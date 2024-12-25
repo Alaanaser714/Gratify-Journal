@@ -32,7 +32,7 @@ class NotesScreen extends StatelessWidget {
         ),
         appBar: AppBar(
           title: Text(
-            "Notes",
+            "alaa",
             style: TextStyle(fontSize: 30),
           ),
           actions: [
