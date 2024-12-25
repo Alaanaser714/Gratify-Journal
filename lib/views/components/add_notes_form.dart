@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use
+// ignore_for_file: deprecated_member_use, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:note_app/cubits/add_notes_cubit/add_notes_cubit.dart';
 import 'package:note_app/cubits/add_notes_cubit/add_notes_states.dart';
 import 'package:note_app/models/notes_model.dart';
+import 'package:note_app/views/screens/notes_screen.dart';
 
 import '../../widgets/colors_listview.dart';
 import '../../widgets/custom_button.dart';
@@ -61,6 +62,16 @@ class _AddNotesFormState extends State<AddNotesForm> {
             ),
             BlocBuilder<AddNotesCubits, AddNotesStates>(
               builder: (context, state) {
+                if (state is AddNotesSuccess) {
+                  Future.microtask(() {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const NotesScreen(),
+                      ),
+                    );
+                  });
+                }
                 return CustomButton(
                   isLoading: state is AddNotesLoading ? true : false,
                   onTap: () {

@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:note_app/constant/colors_app.dart';
 import 'package:note_app/simple_bloc_observe.dart';
-import 'package:note_app/views/screens/notes_screen.dart';
 import 'package:note_app/views/screens/splash_screen.dart';
 
 import 'cubits/notes_cubit/notes_cubit.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: ThemeData(
           appBarTheme:
-              const AppBarTheme(backgroundColor: ColorsApp.backgroundColor),
+              const AppBarTheme(backgroundColor: ColorsApp.buttonColor),
           scaffoldBackgroundColor: ColorsApp.backgroundColor,
           fontFamily: "Open Sans",
         ),

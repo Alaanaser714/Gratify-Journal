@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:note_app/constant/colors_app.dart';
-import 'package:note_app/views/screens/notes_screen.dart';
+import 'package:note_app/views/screens/writes_notes_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const NotesScreen()),
+        MaterialPageRoute(builder: (context) => const WritesNotesScreen()),
       );
     });
     super.initState();
@@ -43,6 +43,9 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontWeight: FontWeight.bold,
                 fontSize: 35,
               ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .01,
             ),
             const Text(
               "Gratitude Journal",
