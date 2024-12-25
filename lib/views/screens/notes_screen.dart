@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:note_app/constant/colors_app.dart';
 
 import 'package:note_app/views/components/custom_listview_notes.dart';
+import 'package:note_app/views/screens/writes_notes_screen.dart';
 
 class NotesScreen extends StatelessWidget {
   const NotesScreen({super.key});
@@ -20,14 +21,14 @@ class NotesScreen extends StatelessWidget {
               color: ColorsApp.textColor,
             ),
           ),
-          actions: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(.25),
-                borderRadius: BorderRadius.circular(8),
-              ),
-            )
-          ],
+          leading: IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => WritesNotesScreen()),
+                );
+              },
+              icon: Icon(Icons.arrow_back)),
         ),
         body: CustomListviewNotes());
   }

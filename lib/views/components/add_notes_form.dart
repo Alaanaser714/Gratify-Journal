@@ -64,7 +64,7 @@ class _AddNotesFormState extends State<AddNotesForm> {
               builder: (context, state) {
                 if (state is AddNotesSuccess) {
                   Future.microtask(() {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const NotesScreen(),
